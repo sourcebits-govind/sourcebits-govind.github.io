@@ -6466,7 +6466,7 @@ footer {
   color: white;
   background-color: #23232b;
   border-color: white;
-  z-index: 0; }
+  }
 
 .btn-tab:focus,
 .btn-tab.focus,
@@ -6507,6 +6507,7 @@ footer {
 
 /* bottom options div */
 .bottom-div {
+  z-index:1;
   position: fixed;
   width: 100%;
   background-color: white;
