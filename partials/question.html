@@ -1,0 +1,182 @@
+<!-- ****************
+Question page VIEW
+ **************** -->
+<div ng-controller="questionController as ques">
+    <div class="timer-div text-center">
+     <span class="timer-span text-center ">  <span class="glyphicon glyphicon-time"></span>15:38</span> 
+    </div>
+    <!--  timer-div -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-3 col-sm-6">
+                <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn btn-tab" ng-class="{'active': ques.tab}" ng-click="ques.tab = true">Retail Promotion Inquiry</a>
+                    <a href="#" class="btn  btn-tab" ng-class="{'active': !ques.tab}" ng-click="ques.tab = false">Past Transactions</a>
+                </div>
+                <div class="table-responsive" ng-if="ques.tab">
+                    <table class="table ceb-table">
+                        <tbody>
+                            <tr>
+                                <td>Discount Starting Date</td>
+                                <td>06/01/2007</td>
+                            </tr>
+                            <tr>
+                                <td>Cash-Back Bonus Starting Date</td>
+                                <td>06/01/2007</td>
+                            </tr>
+                            <tr>
+                                <td>Today’s Date</td>
+                                <td>067/21/2007</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table ceb-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Terms for Retailer Discount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Length of program</td>
+                                <td>60 days</td>
+                            </tr>
+                            <tr>
+                                <td>Minimum required purchase</td>
+                                <td>$200.00</td>
+                            </tr>
+                            <tr>
+                                <td>Retail discount rate</td>
+                                <td>0.5%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table ceb-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Terms for Retailer Cash-Back Bonus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Length of program</td>
+                                <td>60 days</td>
+                            </tr>
+                            <tr>
+                                <td>Minimum required purchase</td>
+                                <td>$100.00</td>
+                            </tr>
+                            <tr>
+                                <td>Retail discount rate</td>
+                                <td>0.25%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" ng-if="!ques.tab">
+                    <table class="table ceb-table">
+                        <tbody>
+                            <tr>
+                                <td>Discount Starting Date</td>
+                                <td>06/01/2007</td>
+                            </tr>
+                            <tr>
+                                <td>Cash-Back Bonus Starting Date</td>
+                                <td>06/01/2007</td>
+                            </tr>
+                            <tr>
+                                <td>Today’s Date</td>
+                                <td>067/21/2007</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table ceb-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Terms for Retailer Cash-Back Bonus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Length of program</td>
+                                <td>60 days</td>
+                            </tr>
+                            <tr>
+                                <td>Minimum required purchase</td>
+                                <td>$100.00</td>
+                            </tr>
+                            <tr>
+                                <td>Retail discount rate</td>
+                                <td>0.25%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table ceb-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Terms for Retailer Discount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Length of program</td>
+                                <td>60 days</td>
+                            </tr>
+                            <tr>
+                                <td>Minimum required purchase</td>
+                                <td>$200.00</td>
+                            </tr>
+                            <tr>
+                                <td>Retail discount rate</td>
+                                <td>0.5%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container -->
+    <div class="bottom-div" ng-class="{'open': ques.open}">
+        <div class="text-center slider-div-up" ng-if="!ques.open" ng-click="ques.toggleOptions()">
+            <span class="slider-btn-up" > <span class="glyphicon glyphicon-triangle-top"></span> Tap for answers</span>
+        </div>
+        <div class="text-center slider-div-down" ng-if="ques.open" ng-click="ques.toggleOptions()">
+         <span class="slider-btn-down" > <span class="glyphicon glyphicon-triangle-bottom"></span> Tap for information</span>  </div>
+        <div class="container ceb-question-container">
+            <div class="row">
+                <div class="col-sm-offset-3 col-sm-6">
+                    <p class="ceb-question">What is the minimum required purchase for a Retailer Discount?</p>
+                    <div class="row">
+                        <div class="col-xs-6 options-margin">
+                            <div class="ceb-options">
+                                <span>$100</span>
+                                <input class="pull-right" type="radio" name="optradio">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 options-margin">
+                            <div class="ceb-options"><span>$100.00</span>
+                                <input class="pull-right" type="radio" name="optradio">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 options-margin">
+                            <div class="ceb-options"><span>$100.00</span>
+                                <input class="pull-right" type="radio" name="optradio">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 options-margin">
+                            <div class="ceb-options"><span>$100.00</span>
+                                <input class="pull-right" type="radio" name="optradio">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 options-margin">
+                            <button class="btn btn-ceb">NEXT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bottom-div -->
+</div>
+<!-- questions controler  -->
