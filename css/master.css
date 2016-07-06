@@ -6465,7 +6465,8 @@ footer {
 .btn-tab {
   color: white;
   background-color: #23232b;
-  border-color: white; }
+  border-color: white;
+  z-index: 0; }
 
 .btn-tab:focus,
 .btn-tab.focus,
