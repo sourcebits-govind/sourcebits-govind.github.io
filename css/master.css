@@ -6529,11 +6529,7 @@ footer {
 
 /* bottom options div */
 .bottom-div {
-<<<<<<< HEAD
   z-index: 100;
-=======
-  z-index:10;
->>>>>>> origin/master
   position: fixed;
   width: 100%;
   background-color: white;
