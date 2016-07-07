@@ -6443,14 +6443,34 @@ footer {
 
 /*NAVBAR */
 .navbar-default {
+  margin-bottom: 0px;
   background: #f7f7f7;
-  margin-bottom: 0px; }
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#f7f7f7, #ebebeb);
+  box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.15), 0px 1px 0px 0px rgba(0, 0, 0, 0.15); }
+  .navbar-default .navbar-brand {
+    padding-top: 12px;
+    float: none;
+    margin-left: -5px; }
+    .navbar-default .navbar-brand img {
+      display: inline; }
+
+.navbar-default .navbar-toggle {
+  margin-left: 10px;
+  border: none; }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #00adee;
+    box-shadow: 0px 1px 8px 0px rgba(255, 255, 255, 0.75); }
 
 /*TImer*/
 .timer-div {
   background-color: #7ed321;
   margin-bottom: 50px;
-  height: 10px; }
+  height: 10px;
+  box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.5), 0px 1px 0px 0px rgba(0, 0, 0, 0.08); }
   .timer-div .timer-span {
     background-image: url(/images/timer-left.png), url(/images/timer-right.png);
     background-position: left bottom, right bottom;
@@ -6458,15 +6478,14 @@ footer {
     width: 115px;
     display: inline-block;
     position: relative;
-    top: 3px;
-    background-color: #7ED321; }
+    top: 2px;
+    background-color: #7ed321; }
 
 /* Tab Button */
 .btn-tab {
   color: white;
   background-color: #23232b;
-  border-color: white;
-  z-index: 0; }
+  border-color: white; }
 
 .btn-tab:focus,
 .btn-tab.focus,
@@ -6507,6 +6526,7 @@ footer {
 
 /* bottom options div */
 .bottom-div {
+  z-index: 100;
   position: fixed;
   width: 100%;
   background-color: white;
@@ -6543,9 +6563,9 @@ footer {
   .slider-div-down .slider-btn-down {
     background-color: #23232b;
     position: relative;
-    top: 13px;
+    top: 12px;
     /* border-radius: 30px; */
-    background-image: url(/images/slide-black-btn-right.png), url(/images/slide-black-btn-left.png);
+    background-image: url(/images/slide-down-right.png), url(/images/slide-down-left.png);
     background-position: right bottom, left bottom;
     background-repeat: no-repeat, no-repeat;
     margin: -2px;
@@ -6601,15 +6621,6 @@ footer {
   height: 44px;
   border-radius: 0px;
   width: 100%;
-  color: white;
-  /* For browsers that do not support gradients */
-  /* For Safari 5.1 to 6.0 */
-  /* For Opera 11.1 to 12.0 */
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#00c8f3, #0097f3);
-  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.15), 0px 3px 8px 0px rgba(0, 199, 243, 0.3); }
-
-.btn-ceb:hover {
   color: #00adee;
   border: 1px solid rgba(0, 0, 0, 0.05);
   /* For browsers that do not support gradients */
@@ -6619,6 +6630,29 @@ footer {
   background: linear-gradient(white, #f3f3f3);
   /* Standard syntax */
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2); }
+
+.btn-ceb:hover {
+  color: white;
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#00c8f3, #0097f3);
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.15), 0px 3px 8px 0px rgba(0, 199, 243, 0.3); }
+
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: -5px; } }
+
+@media (max-width: 768px) {
+  .navbar-center {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+    height: 100%; } }
 
 /*-------------------------------------------------
 SMACSS: LAYOUT - HEADER
