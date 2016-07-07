@@ -6485,7 +6485,10 @@ footer {
 .btn-tab {
   color: white;
   background-color: #23232b;
+
   border-color: white; }
+
+ 
 
 .btn-tab:focus,
 .btn-tab.focus,
@@ -6526,7 +6529,11 @@ footer {
 
 /* bottom options div */
 .bottom-div {
+<<<<<<< HEAD
   z-index: 100;
+=======
+  z-index:10;
+>>>>>>> origin/master
   position: fixed;
   width: 100%;
   background-color: white;
