@@ -6,7 +6,7 @@ Question page VIEW
      <span class="timer-span text-center ">  <span class="glyphicon glyphicon-time"></span>15:38</span> 
     </div>
     <!--  timer-div -->
-    <div class="container">
+    <div class="container" ng-class="{'fadein': ques.open}" ng-click="ques.closeOptions()">
         <div class="row">
             <div class="col-sm-offset-3 col-sm-6">
                 <div class="btn-group btn-group-justified">
@@ -26,7 +26,7 @@ Question page VIEW
                             </tr>
                             <tr>
                                 <td>Today’s Date</td>
-                                <td>067/21/2007</td>
+                                <td>07/21/2007</td>
                             </tr>
                         </tbody>
                     </table>
@@ -86,7 +86,7 @@ Question page VIEW
                             </tr>
                             <tr>
                                 <td>Today’s Date</td>
-                                <td>067/21/2007</td>
+                                <td>07/21/2007</td>
                             </tr>
                         </tbody>
                     </table>
@@ -133,42 +133,28 @@ Question page VIEW
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </div>	
         </div>
     </div>
     <!-- container -->
-    <div class="bottom-div" ng-class="{'open': ques.open}">
-        <div class="text-center slider-div-up" ng-if="!ques.open" ng-click="ques.toggleOptions()">
+    <div class="bottom-div" ng-class="{'open': ques.open}" ng-click="ques.open ||ques.openOptions()">
+        <div class="text-center slider-div-up" ng-if="!ques.open" >
             <span class="slider-btn-up" > <span class="glyphicon glyphicon-triangle-top"></span> Tap for answers</span>
         </div>
-        <div class="text-center slider-div-down" ng-if="ques.open" ng-click="ques.toggleOptions()">
+        <div class="text-center slider-div-down" ng-if="ques.open" ng-click="ques.closeOptions();$event.stopPropagation();">
          <span class="slider-btn-down" > <span class="glyphicon glyphicon-triangle-bottom"></span> Tap for information</span>  </div>
         <div class="container ceb-question-container">
             <div class="row">
                 <div class="col-sm-offset-3 col-sm-6">
                     <p class="ceb-question">What is the minimum required purchase for a Retailer Discount?</p>
                     <div class="row">
-                        <div class="col-xs-6 options-margin">
-                            <div class="ceb-options">
-                                <span>$100</span>
-                                <input class="pull-right" type="radio" name="optradio">
+                        <div class="col-xs-6 options-margin" ng-repeat="option in ques.test.options"> 
+                            <div class="ceb-options" ng-click="ques.answer = option">
+                                <span> {{option}}</span>
+                                <input class="pull-right" type="radio" name="optradio" ng-model="ques.answer" ng-value="option">
                             </div>
                         </div>
-                        <div class="col-xs-6 options-margin">
-                            <div class="ceb-options"><span>$100.00</span>
-                                <input class="pull-right" type="radio" name="optradio">
-                            </div>
-                        </div>
-                        <div class="col-xs-6 options-margin">
-                            <div class="ceb-options"><span>$100.00</span>
-                                <input class="pull-right" type="radio" name="optradio">
-                            </div>
-                        </div>
-                        <div class="col-xs-6 options-margin">
-                            <div class="ceb-options"><span>$100.00</span>
-                                <input class="pull-right" type="radio" name="optradio">
-                            </div>
-                        </div>
+
                         <div class="col-xs-12 options-margin">
                             <button class="btn btn-ceb">NEXT</button>
                         </div>
