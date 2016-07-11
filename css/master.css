@@ -6506,11 +6506,13 @@ footer {
   .table thead > tr {
     background-color: gray; }
     .table thead > tr th:nth-child(even) {
-      background-color: #626267; }
+      background-color: #626267;
+      min-width: 78px; }
   .table tbody > tr:nth-child(odd) {
     background-color: #2E2E35; }
     .table tbody > tr:nth-child(odd) td:nth-child(even) {
-      background-color: #38383F; }
+      background-color: #38383F;
+      min-width: 78px; }
   .table tbody > tr:nth-child(even) {
     background-color: #43434A; }
     .table tbody > tr:nth-child(even) td:nth-child(even) {
