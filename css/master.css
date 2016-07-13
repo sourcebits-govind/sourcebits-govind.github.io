@@ -6483,6 +6483,15 @@ footer {
     position: relative;
     top: 2px;
     background-color: #7ed321; }
+  .timer-div .clock {
+    background: url(/images/timerClock.png) no-repeat 0 0;
+    height: 10px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    top: 15px;
+    margin-top: -10px;
+    left: 30px; }
 
 .container.fadein .row {
   opacity: .2;
@@ -6597,13 +6606,9 @@ footer {
 .ceb-options {
   font-size: 16px;
   height: 60px;
-  width: 25%;
-  margin: 10px;
   padding-left: 20px;
   padding-right: 10px;
-  padding-top: 8px;
-  display: table-cell;
-  vertical-align: middle;
+  padding-top: 18px;
   color: #00adee;
   border: 1px solid rgba(0, 0, 0, 0.05);
   /* For browsers that do not support gradients */
@@ -6614,7 +6619,7 @@ footer {
   /* Standard syntax */
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2); }
 
-.ceb-options .active {
+.ceb-options.active {
   color: white;
   /* For browsers that do not support gradients */
   /* For Safari 5.1 to 6.0 */
