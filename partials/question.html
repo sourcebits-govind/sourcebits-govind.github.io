@@ -2,19 +2,23 @@
 Question page VIEW
  **************** -->
 <div ng-controller="questionController as ques">
-
-   <div class="timer-bar"><uib-progressbar value="ques.percent"></uib-progressbar></div>
+    <div class="timer-bar">
+        <uib-progressbar value="ques.percent">
+            <span class="sr-only">Split button!</span>
+        </uib-progressbar>
+    </div>
     <!--  timer -->
-    <table class="time">
-       <tr>
-           <td></td>
-            <td class="fix"> <span><img src="/images/timerClock.png"> {{ques.display}}</span> </td>
+    <table class="time" ng-click="ques.closeOptions()">
+        <tr>
             <td></td>
-       </tr>
-       </table>
+            <td class="fix"> <span><img src="/images/timerClock.png" alt="Clock icon"> {{ques.display}}</span> </td>
+            <td></td>
+        </tr>
+    </table>
     <div class="container instructions" ng-class="{'fadein': ques.open}" ng-click="ques.closeOptions()">
         <div class="row">
             <div class="col-sm-offset-2  col-sm-8 col-md-offset-3  col-md-6">
+                <label class="section-heading">INFORMATION</label>
                 <div class="btn-group btn-group-justified">
                     <a href="#" class="btn btn-tab" ng-class="{'active': ques.tab}" ng-click="ques.tab = true">Retail Promotion Inquiry</a>
                     <a href="#" class="btn  btn-tab" ng-class="{'active': !ques.tab}" ng-click="ques.tab = false">Past Transactions</a>
@@ -153,10 +157,12 @@ Question page VIEW
         <div class="container ceb-question-container">
             <div class="row">
                 <div class="col-sm-offset-3 col-sm-6">
+                    <label class="section-heading">QUESTION</label>
                     <p class="ceb-question">What is the minimum required purchase for a Retailer Discount?</p>
                     <div class="row">
                         <div class="col-xs-6 options-margin" ng-repeat="option in ques.test.options">
                             <div class="ceb-options" ng-class="{'active': ques.answer == option}" ng-click="ques.answer = option">
+                                <span class="sr-only">Option {{$index+1}} {{option}}</span>
                                 <span>{{option}}</span>
                                 <input class="pull-right" type="radio" name="optradio" ng-model="ques.answer" ng-value="option">
                                 <label>
@@ -177,5 +183,11 @@ Question page VIEW
 </div> -->
     </div>
     <!-- bottom-div -->
+    <div class="ceb-question-progressbar">
+    <span class="ceb-progress-dot"></span>
+    <span class="ceb-progress-dot"></span>
+    <span class="ceb-progress-dot"></span>
+        <uib-progressbar class="progress-striped" value="22" type="warning">22%</uib-progressbar>
+    </div>
 </div>
 <!-- questions controler  -->
