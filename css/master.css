@@ -6528,6 +6528,7 @@ table.time {
 .table {
   margin-top: 10px; }
   .table thead > tr {
+    font-family: 'proxima_semibold';
     background-color: gray; }
     .table thead > tr th:nth-child(even) {
       background-color: #626267;
@@ -6728,14 +6729,16 @@ input[type=radio]:not(old):checked + label {
   z-index: 100;
   width: 100%;
   height: 30px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   padding: 10px;
   background: linear-gradient(#f7f7f7, #f0f0f0);
   box-shadow: 0px -1px 8px 0px rgba(0, 0, 0, 0.15), 0px -1px 0px 0px rgba(0, 0, 0, 0.15), 0px -1px 0px 0px white; }
   .ceb-question-progressbar .progress {
+    max-width: 90%;
     height: 10px;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    border-radius: 30px; }
   .ceb-question-progressbar .ceb-progress-dot {
     width: 10px;
     height: 10px;
